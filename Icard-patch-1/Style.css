@@ -1,5 +1,29 @@
+:root{
+
+  --marron:#9F4743;
+  --testimonyColor:#2A2A3A;
+  --beige: #EECFB4;
+  --rougeMarron:#C75146;
+}
+/* --var() */
+
+
+button{  box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+
+  font-family: 'Raleway', sans-serif;
+
+}
+
 body {
-  background-color: #FEF8F1;
+  background-color: #FDF0E5;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 .menu {
@@ -35,21 +59,34 @@ body {
 
 .Mokeup {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .Mokeup p {
   width: 75%;
 }
+.Mokeup .Mobile {
+background-color: var(--rougeMarron);
+
+}
+
 .Mokeup button {
   box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin: 0.5rem;
-  margin-top: 7rem;
+  border-radius: 5px;
+  margin: 1rem;
+  margin-top: 3rem;
   width: 10rem;
+  height: 3rem;
+}
+
+.Mokeup {
+
+  background-color: var(--beige);
+  margin-bottom: 15rem;
+  margin-top: 5rem;
 }
 
 h2 {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .DLM-Studio {
@@ -63,42 +100,58 @@ h2 {
 }
 .DLM-Studio div button:first-of-type {
   box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
+  background-color: var(--marron);
 }
 .DLM-Studio div button {
   border-radius: 5px;
-  width: 20%;
+  width: 30%;
+  height: 3rem;
+  margin: 1rem;
+  box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
+
 }
 
 .Information {
   margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
+  background-color: var(--beige);
 }
 .Information div {
   width: 40%;
   text-align: center;
   margin: 1rem;
   padding: 2rem;
-  background-color: gray;
 }
 
 
 .iphone{
 
-  margin-top: -48rem;
+  margin-top: -55rem;
   margin-left: 70rem;
   position: absolute;
 }
 
 footer {
   display: flex;
-  margin-top: 2rem;
+  justify-content: center;
+  margin-top: 6rem;
+  opacity: 0.7;
 }
-footer ul {
-  display: flex;
-  justify-content: space-evenly;
-  width: 50%;
+footer .reseau {
+ display: flex;
+ 
+}
+
+footer .reseau li {
+margin: 0.5rem; 
 }
 footer ul li {
   list-style: none;
 }/*# sourceMappingURL=Style.css.map */
+
+
+footer p {
+
+  margin-left:5rem ;
+}
