@@ -1,0 +1,168 @@
+img{
+    width:100%;
+}
+
+#decouvrir {
+    width: 85%;
+}
+
+#imageSchema {
+    width: 400px;
+}
+
+#imageSchema p {
+    position: absolute;
+}
+
+#annot1 {
+    right: calc(50% + 71px);
+   
+}
+#annot1::after{
+    content:'';
+    display:block;
+    width:250px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    bottom:23px;
+    left:71px;
+}
+#annot2 {
+    right: calc(50% + 71px);
+
+}
+#annot2::after{
+    content:'';
+    display:inline-block;
+    width:190px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    bottom:15px;
+}
+#annot1 {
+    right: calc(50% + 0px);
+    margin-top:225px;
+}
+#annot1::after{
+    content:'';
+    display:inline-block;
+    width:250px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    bottom:17px;
+    left:0px;
+}
+#annot2 {
+    right: calc(50% + 60px);
+    margin-top:618px;
+}
+#annot2::after{
+    content:'';
+    display:inline-block;
+    width:190px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    bottom:15px;
+
+}
+#annot3 {
+    left: calc(50% + 70px);
+    display:inline-block;
+    text-align:right;
+    margin-top:92px;
+}
+#annot3::before{
+    content:'';
+    display:inline-block;
+    width:190px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    top:6px;
+    right:5px;
+}
+#annot4 {
+    left: calc(50% + 70px);
+    display:inline-block;
+    text-align:right;
+    margin-top:643px;
+}
+#annot4::before{
+    content:'';
+    display:inline-block;
+    width:190px;
+    height:0px;
+    border: 1px solid black;
+    position:relative;
+    top:6px;
+    right:5px;
+}
+#excellence .sectionImage{
+    width:38%;
+}
+#epure{
+    box-shadow: 0 4px 6px -6px #22222286;
+}
+
+
+#epure .carte{
+    margin:20px;
+    width:360px;
+    height:310px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#epure .carte>div{
+    background-color: none;
+    width:100%;
+    height:310px;
+    padding:18px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#epure .carte>div{
+    color:transparent;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+#epure .carte:hover>div{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgb(255, 255, 255);
+    transition: color 1s;
+    transition: background-color 0.5s;
+}
+
+#epure1{
+    background-image: url("../img/tourEiffel.jpg");
+}
+#epure2{
+    background-image: url("../img/tourEiffel.jpg");
+
+}
+#epure3{
+    background-image: url("../img/tourEiffel.jpg");
+}
+
+#comments .carte{
+    margin:20px;
+    padding: 15px;
+    width:360px;
+    height:310px;
+    background-color: rgb(51, 51, 51);
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+

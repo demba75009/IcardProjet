@@ -1,0 +1,175 @@
+
+body{
+
+    background-color: #FEF8F1
+    ;
+}
+
+.menu{
+
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+
+    li{
+
+        list-style: none;
+        margin: 1rem;
+    }
+}
+
+.testimony-texte{
+
+    margin-bottom: 5rem;
+}
+
+
+.testimony {
+    
+    width: 75%;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    
+    div{
+
+        width: 100%;
+
+        
+
+        img{
+            border-radius: 50%;
+            width: 5rem;
+        }
+    
+
+    }
+
+    div:before{
+
+        content: "";
+    }
+
+ 
+
+    
+  }
+  
+
+
+.Mokeup{
+    
+    display: flex;
+    justify-content: space-evenly;
+    p{
+        width: 75%;
+    }
+
+
+    
+    
+    button{
+        box-shadow: 0px 32px 24px -3px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        margin: 0.5rem;
+        margin-top:7rem;
+        width: 10rem;
+
+    }
+}
+
+h2{
+
+    margin-top: 5rem;
+}
+
+.DLM-Studio {
+
+    margin-top: 5rem;
+    display: flex;
+
+    justify-content: space-evenly;
+
+    div{
+
+        p{
+            width: 75%;
+            margin-top: 2rem;
+
+        }
+
+        button:first-of-type{
+
+
+            box-shadow: 0px 32px 24px -3px rgba(0,0,0,0.1);
+        }
+
+        button{
+            border-radius: 5px;
+            width: 20%;
+
+        }
+    }
+
+
+}
+
+// .testimony{
+
+//     display: flex;
+//     justify-content: space-evenly;
+
+//     div{
+
+//         text-align: center;
+//         background-color: grey;
+//         margin: 1rem;
+//         width: 25rem;
+
+//     }
+
+//     img{
+
+//         width: 3rem;
+//         border-radius: 50%;
+//         display: block;
+//         margin: auto;
+//     }
+    
+// }
+
+
+.Information{
+
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    div{
+        width: 40%;
+        text-align: center;
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+}
+
+footer{
+
+    display: flex;
+    margin-top: 2rem;
+
+    ul{
+
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        li{
+
+            list-style: none;
+        }
+    }
+}
+
