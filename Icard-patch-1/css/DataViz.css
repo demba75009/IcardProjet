@@ -49,6 +49,10 @@ li {
   opacity: 0.5;
 }
 
+.Chansons{
+  background-color: var(--beige);
+}
+
 .musique{
 
   text-align: center;
@@ -58,4 +62,11 @@ li {
 
 .musique h3{
   padding: 1rem;
+}
+
+#sectionFreqEtDuree{
+  background-color: var(--testimonyColor);
+}
+#sectionFreqEtDuree h2{
+  color:var(--beigeClair);
 }

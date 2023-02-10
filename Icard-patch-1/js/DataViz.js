@@ -1,9 +1,75 @@
 const ctx = document.querySelector('#myChart');
 
-const ctx1 = document.querySelector('#Fausse-Note');
-const ctx2 = document.querySelector('#Justesse');
+const faussesNotes = document.querySelector('#Fausse-Note');
+const justesse = document.querySelector('#Justesse');
 
-const frequenceEtDuree= document.getElementById('frequenceEtDuree')
+const frequenceEtDuree = document.getElementById('frequenceEtDuree')
+
+const justesseObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    //affichage de nouveau graphique dans la call back
+    new Chart(justesse, {
+      type: 'doughnut',
+      data: {
+        labels: false,//['Error', 'Good'],
+        datasets: [{
+          label: '# of Votes',
+          data: [{ id: 'EM', nested: { value: 800 } }, { id: 'AM', nested: { value: 200 } }],
+          backgroundColor: ['#d27266','#54525d'],
+          borderRadius: [0,0],
+          borderColor:'#54525d',
+          borderWidth:8
+        },
+        {label: '# of Votes'}
+        ],
+      },
+      options: {
+
+        parsing: {
+          key: 'nested.value'
+        }
+      }
+    });
+
+    justesseObserver.disconnect()
+  }
+
+}, { threshold: 1, rootMargin: "0px 0px -120px 0px" })
+justesseObserver.observe(justesse)
+
+
+const faussesNotesObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    //affichage de nouveau graphique dans la call back
+    new Chart(faussesNotes, {
+      type: 'doughnut',
+      data: {
+        labels: false,//['Error', 'Good'],
+        datasets: [{
+          label: '# of Votes',
+          data: [{ id: 'EM', nested: { value: 700 } }, { id: 'AM', nested: { value: 300 } }],
+          backgroundColor: ['#d27266','#54525d'],
+          borderRadius: [0,0],
+          borderColor:'#54525d',
+          borderWidth:8
+        },
+        {label: '# of Votes'}
+        ],
+      },
+      options: {
+
+        parsing: {
+          key: 'nested.value'
+        }
+      }
+    });
+
+    faussesNotesObserver.disconnect()
+  }
+
+}, { threshold: 1, rootMargin: "0px 0px -180px 0px" })
+faussesNotesObserver.observe(faussesNotes)
+
 
 new Chart(ctx, {
   type: 'doughnut',
@@ -11,86 +77,79 @@ new Chart(ctx, {
     labels: ['A', 'EM'],
     datasets: [{
       label: '%echec',
-      data: [{id: 'EM', nested: {value: 1500}}, {id: 'AM', nested: {value: 500}}]
-    }]
+      data: [{ id: 'EM', nested: { value: 1500 } }, { id: 'AM', nested: { value: 500 } }]
+    },
+    {label: '# of Votes'}
+      ]
   },
   options: {
     parsing: {
-        key: 'nested.value'
-      }
-  }
-});
-
-new Chart(ctx1, {
-  type: 'doughnut',
-  data: {
-    labels: ['Error', 'Good'],
-    datasets: [{
-      label: '# of Votes',
-      data: [{id: 'EM', nested: {value: 500}}, {id: 'AM', nested: {value: 500}}]
-    }]
-  },
-  options: {
-    parsing: {
-        key: 'nested.value'
-      }
-  }
-});
-
-new Chart(ctx2, {
-  type: 'doughnut',
-  data: {
-    labels: ['Erreur', 'Good'],
-    datasets: [{
-      label: '# of Votes',
-      data: [{id: 'EM', nested: {value: 500}}, {id: 'AM', nested: {value: 1000}}]
-    }]
-  },
-  options: {
-    parsing: {
-        key: 'nested.value'
-      }
-  }
-});
-
-new Chart(frequenceEtDuree, {
-  type: 'bar',
-  data: {
-    labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'dec'],
-    datasets: [{
-      label: '',
-      data: [456, 394, 242, 374, 286, 184, 324, 128, 94, 183, 320, 180],
-      borderWidth: 0,
-      borderRadius:3,
-      barThickness:6,
-      backgroundColor: '#60798d'
-    },{
-      label:'none',
-      data:[250, 300, 220, 365, 260, 400, 420, 600, 500, 550, 400, 450],
-      type:'line',
-      borderColor:'#9f72ff',
-      pointStyle:false
-    },{
-      label:'',
-      data:[50, 100, 60, 140, 110, 260, 120, 200, 190, 210,150, 80],
-      type:'line',
-      fill:true,
-      borderWidth: 0,
-      backgroundColor:'#bcb7b1',
-      pointStyle:false
-
-    }]
-  },
-  options: {
-            // color: 'lightGreen'
-      backgroundColor:'#bcb7b1',
-    scales: {
-      y: {
-        beginAtZero: true
-      }
+      key: 'nested.value'
     }
   }
+});
 
-}
 
-)
+const freqObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    //affichage de nouveau graphique dans la call back
+    new Chart(frequenceEtDuree, {
+      type: 'bar',
+      data: {
+        labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'dec'],
+        datasets: [{
+          label: 'Fréquence',
+          data: [456, 394, 242, 374, 286, 184, 324, 128, 94, 183, 320, 180],
+          borderWidth: 0,
+          borderRadius: 5,
+          barThickness: 8,
+          backgroundColor: '#EECFB4'
+        }, {
+          label: 'Durée',
+          data: [250, 300, 220, 365, 260, 400, 420, 600, 500, 550, 400, 450],
+          type: 'line',
+          borderColor: '#9F4743',
+          pointStyle: false,
+
+
+        }
+          // ,{
+          //   label:'',
+          //   data:[50, 100, 60, 140, 110, 260, 120, 200, 190, 210,150, 80],
+          //   type:'line',
+          //   fill:true,
+          //   borderWidth: 0,
+          //   backgroundColor:'#bcb7b1',
+          //   pointStyle:false
+
+          // }
+        ]
+      },
+      options: {
+        color: '#FDF0E5',
+        backgroundColor: '#bcb7b1',
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#FDF0E5' },
+            grid: { color: '#EECFB4' },
+            border: { display: false }
+          },
+
+          x: {
+            ticks: { color: '#FDF0E5' },
+            grid: { display: false }
+          }
+
+        },
+        plugins: { legend: { labels: { usePointStyle: true } } }
+      }
+    })
+
+
+    freqObserver.disconnect()
+  }
+
+}, { threshold: 1, rootMargin: "0px 0px -180px 0px" })
+freqObserver.observe(frequenceEtDuree)
+
