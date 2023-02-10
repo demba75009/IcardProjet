@@ -4,9 +4,20 @@
   --testimonyColor:#2A2A3A;
   --beige: #EECFB4;
   --rougeMarron:#C75146;
+  --noir:#2A2A3A
 }
 /* --var() */
 
+.logo{
+
+  width: 15%;
+}
+
+.logo2{
+  width: 7%;
+  display: block;
+  margin-left:50%;
+}
 
 button{  box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
 }
@@ -36,30 +47,12 @@ a{
   margin: 1rem;
 }
 
-.testimony-texte {
-  margin-bottom: 5rem;
-}
-
-.testimony {
-  width: 75%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-}
-.testimony div {
-  width: 100%;
-}
-.testimony div img {
-  border-radius: 50%;
-  width: 5rem;
-}
-.testimony div:before {
-  content: "";
-}
-
 .Mokeup {
   display: flex;
   justify-content: center;
+  background-color: var(--beige);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .Mokeup p {
   width: 75%;
@@ -78,12 +71,7 @@ background-color: var(--rougeMarron);
   height: 3rem;
 }
 
-.Mokeup {
 
-  background-color: var(--beige);
-  margin-bottom: 15rem;
-  margin-top: 5rem;
-}
 
 h2 {
   margin-top: 2rem;
@@ -92,7 +80,9 @@ h2 {
 .DLM-Studio {
   margin-top: 5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
+  margin-left: 10rem;
 }
 .DLM-Studio div p {
   width: 75%;
@@ -111,31 +101,60 @@ h2 {
 
 }
 
+.DLM-Studio .Guitare-Home{
+
+  width: 50%;
+}
+
+.Guitare-Home img{
+  width: 80%;
+}
+
 .Information {
   margin-top: 5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: var(--beige);
 }
-.Information div {
-  width: 40%;
-  text-align: center;
-  margin: 1rem;
-  padding: 2rem;
+.Information img {
+  width: 10%;
+  
 }
+
+
 
 
 .iphone{
 
-  margin-top: -55rem;
-  margin-left: 70rem;
+  margin-top: -66rem;
+  margin-left: 64rem;
   position: absolute;
+
+  width: 40rem;
 }
 
-footer {
+.iphone:hover{
+
+  transform: translate(2em);
+}
+
+.graphique,.iphone{
+
+  cursor: pointer;
+}
+.graphique:hover .iphone{
+
+  z-index: 0
+}
+
+footer{
+
+  margin-top: 4rem;
+}
+
+footer div{
   display: flex;
-  justify-content: center;
-  margin-top: 6rem;
+  justify-content: space-evenly;
   opacity: 0.7;
 }
 footer .reseau {
@@ -154,4 +173,65 @@ footer ul li {
 footer p {
 
   margin-left:5rem ;
+}
+
+
+
+.carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 1em;
+  background-color: var(--noir);
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  color: white;
+  border: none;
+}
+.carousel-control-prev {
+  background-color: var(--marron);
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 105%;
+  margin-left: 46%;
+  transform: translateY(-50%);
+}
+
+
+.carousel-control-next{
+  background-color: var(--marron);
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 105%;
+  margin-right: 46%;
+  transform: translateY(-50%);
+
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 25%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper img{
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
 }

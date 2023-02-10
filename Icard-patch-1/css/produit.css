@@ -47,6 +47,12 @@
   
   }
 
+
+  .guitare{
+    
+    height: 55rem;
+  }
+
 img{
     width:100%;
 }
@@ -208,17 +214,17 @@ h2{
 }
 
 #epure1{
-    background-image: url("../img/tourEiffel.jpg");
+    background-image: url("../img/pageproduit-2/produit.png");
 }
 #epure2{
-    background-image: url("../img/tourEiffel.jpg");
+    background-image: url("../img/pageproduit-2/produit2.png");
 
 }
 #epure3{
-    background-image: url("../img/tourEiffel.jpg");
+    background-image: url("../img/pageproduit-2/produit3.png");
 }
 #epure4{
-    background-image: url("../img/tourEiffel.jpg");
+    background-image: url("../img/pageproduit-2/produit4.png");
 }
 
 #comments .carte{
