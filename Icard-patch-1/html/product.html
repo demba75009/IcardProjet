@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../Style.css">
     <link rel="stylesheet" href="../css/produit.css">
+    <script src="../js/produit.js" defer></script>
     <title>Produit</title>
 </head>
 
@@ -21,9 +22,9 @@
                 <ul class="menu">
 
                     <li><a href="../Home.html">Home</a> </li>
-                    <li> <a href="product.html
+                    <li> <a href="pr
                         ">Fiche produit</a> </li>
-                    <li> <a href="DataViz.html">Data viz</a> </li>
+                    <li>Data viz</li>
                     <li><i class="fa-solid fa-user"></i></li>
                     <li><i class="fa-solid fa-cart-shopping"></i></li>
 
@@ -33,15 +34,15 @@
         </nav>
     </header>
     <main>
-<!-- -----------------  ----------------------- -->
-        <section id="decouvrir" class="d-flex mx-auto mt-3 mb-5">
+        <!-- -----------------  ----------------------- -->
+        <section id="decouvrir" class="d-flex mx-auto mt-3 mb-5" style="max-width:1100px">
             <div class="d-flex align-items-center">
                 <div class="">
                     <h2>iCord</h2>
                     <p>La guitare connectée</p>
                     <div class="mt-5">
                         <button>Acheter</button>
-                        <button>Découvrir</button>                    
+                        <button>Découvrir</button>
                     </div>
                 </div>
             </div>
@@ -49,37 +50,39 @@
                 <img src="https://via.placeholder.com/150x110" alt="" class="w-100 ">
             </div>
         </section>
-<!-- -----------------  ----------------------- -->
-        <section id="lancement" class="d-flex justify-content-around py-5">
+        <!-- -----------------  ----------------------- -->
+        <section id="lancement" class="d-flex justify-content-around py-5 mx-auto align-items-center"
+            style="max-width:1100px">
             <div>
                 <button>VOIR l'EVENEMENT</button>
             </div>
-            <div>
+            <div class="">
                 <h2>Soirée de lancement iCord</h2>
-                <p>Concert de Ed Sheeran pour le lancement de la guitare iCord par DLM Studio</p>
+                <p style="max-width:500px">Concert de Ed Sheeran pour le lancement de la guitare iCord par DLM Studio
+                </p>
             </div>
         </section>
 
         <section id="technologie" class="mb-5">
             <div class="text-center mb-5">
                 <h2>Une technologie hors du commun</h2>
-                <p>La guitare éléctro-accoustique coonécté à votre téléphone</p>                
+                <p>La guitare éléctro-accoustique coonécté à votre téléphone</p>
             </div>
 
             <!-- <div id="schema" class="d-flex justify-content-center flex-column align-items-center"> -->
             <div id="imageSchema" class="mx-auto">
                 <div class="w-100">
                     <p id="annot1">Capteur<br>intensité</p>
-                    <p id="annot2">Capteur<br>intensité</p>
-                    <p id="annot3">Capteur<br>intensité</p>
-                    <p id="annot4">Capteur<br>intensité</p>
+                    <p id="annot2">Capteur<br>vibrations</p>
+                    <p id="annot3">Capteur<br>fréquence</p>
+                    <p id="annot4">Capteur<br>audio</p>
                     <img src="https://via.placeholder.com/50x110" alt="" class="w-100">
                 </div>
             </div>
 
             <!-- </div> -->
         </section>
-<!-- -------------------------  ----------------------------- -->
+        <!-- -------------------------  ----------------------------- -->
         <section id="excellence" class="d-flex align-items-center justify-content-center mb-5">
             <div class=" mb-5 w-25">
                 <h2>L'excellence en qualité sonore</h2>
@@ -88,14 +91,14 @@
                 <img src="https://via.placeholder.com/50x50" alt="">
             </div>
         </section>
-<!-- ------------------ ------------------------ -->
-        <section id="epure" class="px-5 pb-4">
+        <!-- ------------------ ------------------------ -->
+        <section id="epure" class="px-5 pb-4 mx-auto" style="max-width:1300px">
             <div class="d-flex justify-content-start mb-5">
                 <h2 style="width:300px; margin-left: 20px;">Design Epuré</h2>
-                <p class="w-25 text-center mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, totam explicabo harum accusamus expedita
-                    repudiandae excepturi recusandae vero molestias iure modi architecto beatae distinctio!</p>
+                <p class="w-25 text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                    et suscipit at. Dolorem, iusto adipisci.</p>
             </div>
-            
+
             <div class="d-flex justify-content-between">
                 <div class="carte" id="epure1">
                     <div>
@@ -105,14 +108,14 @@
                 </div>
                 <div class="carte" id="epure2">
                     <div>
-                    <h3>Table en épicéa massif sélectionné</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, placeat. Eaque?</p>
-                </div>
+                        <h3>Table en épicéa massif sélectionné</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, placeat. Eaque?</p>
+                    </div>
                 </div>
                 <div class="carte" id="epure3">
                     <div>
-                    <h3>Cordes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nam.</p>
+                        <h3>Cordes</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nam.</p>
                     </div>
                 </div>
             </div>
@@ -120,41 +123,45 @@
         <!-- ------------------------  ------------------------------ -->
         <section id="comments" class="mt-5 d-flex flex-column align-items-center">
             <h2>Ils ont validé l'experience iCord</h2>
-            <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda ex tenetur iure. Quod vitae et earum
+            <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda ex tenetur iure. Quod
+                vitae et earum
                 officia minima.</p>
 
             <div class="cartes d-flex justify-content-between mx-5 my-5">
                 <div class="carte">
-                    <div class="stars d-flex justify-content-center"> 
+                    <div class="stars d-flex justify-content-center">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
-                        <img src="../img/star-rate-grey.png" alt="">
+                        <!-- <img src="../img/star-rate-grey.png" alt=""> -->
                     </div>
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet quo debitis incidunt facere?</h3>
-                    <h4>Bertram Jensen</h4>
+                    <h4 class="my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, recusandae?
+                    </h4>
+                    <h5>Bertram Jensen</h5>
                     <p>Author at Parol Store</p>
                 </div>
                 <div class="carte">
-                    <div class="stars d-flex justify-content-center"> 
+                    <div class="stars d-flex justify-content-center">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                     </div>
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet quo debitis incidunt facere?</h3>
-                    <h4>Bertram Jensen</h4>
+                    <h4 class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae.
+                    </h4>
+                    <h5>Bertram Jensen</h5>
                     <p>Author at Parol Store</p>
                 </div>
                 <div class="carte">
-                    <div class="stars d-flex justify-content-center"> 
+                    <div class="stars d-flex justify-content-center">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                         <img src="../img/star-rate-grey.png" alt="">
                     </div>
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet quo debitis incidunt facere?</h3>
-                    <h4>Bertram Jensen</h4>
+                    <h4 class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, est labore.
+                    </h4>
+                    <h5>Bertram Jensen</h5>
                     <p>Author at Parol Store</p>
                 </div>
             </div>

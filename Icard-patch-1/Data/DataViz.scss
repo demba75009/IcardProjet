@@ -1,0 +1,21 @@
+.titre{
+    margin-top: 5rem;
+}
+
+li{list-style: none;}
+
+
+.filtre{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button{
+
+        margin: 1rem;
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+}
