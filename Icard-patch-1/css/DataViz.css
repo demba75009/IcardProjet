@@ -18,7 +18,7 @@ li {
   border-radius: 10px;
 }/*# sourceMappingURL=DataViz.css.map */
 
-.Données,.Frequence-Titre,.Chansons{
+.Données,.Chansons{
 
   display: flex;
 
@@ -40,7 +40,7 @@ li {
 .diagramme{
 
   margin-top: 5rem;
-  background-color: rgba(128, 128, 128, 0.241);
+  /* background-color: rgba(128, 128, 128, 0.241); */
 }
 
 
