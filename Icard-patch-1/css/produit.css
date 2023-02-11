@@ -4,6 +4,7 @@
     --testimonyColor:#2A2A3A;
     --beige: #EECFB4;
     --rougeMarron:#C75146;
+    --beigeClair: #FDF0E5;
   }
 
 
@@ -12,27 +13,27 @@
     margin-right: 3rem;
 
 }
-  .prix{
+  /* .prix{
 
     opacity: 0.6;
-  }
+  } */
 
   .Précommander{
 
-    background-color: var(--marron);
+    background-color: var(--rougeMarron);
     width: 10rem;
     border: none;
 
   }
   .Decouvrir{
     width: 10rem;
-
+    background-color: var(--beigeClair);
 
   }
 
   .Get-started{
 
-    background-color: var(--marron);
+    background-color: var(--rougeMarron);
     width: 18rem;
     border: none;
   }
@@ -43,15 +44,18 @@
     
     height: 3rem;
     margin: 1rem;
-    box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 32px 24px -3px rgba(0, 0, 0, 0.1); */
   
   }
 
 
-  .guitare{
+  /* surtout pas mettre un height, car ça va déformer l'image. 
+  A la rigeur, redimensionner la LARGEUR du contenant de l'image (il faut toujours un contenant à une img !), mais pas dans le cas présent, 
+  car il y a des éléments et des animations qui doivent rester callés au pixel près sur cette image.
+   .guitare{
     
     height: 55rem;
-  }
+  } */
 
 img{
     width:100%;
@@ -78,11 +82,17 @@ h2{
 }
 
 /* ------------------------ */
+#imageSchema span{
+    font-size:12px;
+    line-height: normal;
+} 
+
+/*--------*/
 #annot1 {
     right:calc(50% + 300px);
     display:block;
     color:transparent;
-    margin-top:225px;
+    margin-top:15px;
 }
 #annot1::after{
     content:'';
@@ -91,13 +101,13 @@ h2{
     height:0px;
     border: 1px solid;
     position:relative;
-    bottom:17px;
+    bottom:67px;
     left:0px;
 }
 #annot2 {
     right:calc(50% + 300px);
     display:block;
-    margin-top:618px;
+    margin-top:354px;
     color:transparent;
 }
 #annot2::after{
@@ -114,7 +124,7 @@ h2{
     left: calc(50% + 300px);
     display:inline-block;
     text-align:right;
-    margin-top:92px;
+    margin-top:190px;
     color:transparent;
 }
 #annot3::before{
@@ -131,7 +141,7 @@ h2{
     left: calc(50% + 300px);
     display:inline-block;
     text-align:right;
-    margin-top:643px;
+    margin-top:494px;
     color:transparent;
 }
 #annot4::before{
@@ -146,24 +156,24 @@ h2{
 }
 /* -----transition des annotations------- */
 #annot1.anim{
-    right: calc(50% + 0px);
+    right: calc(50% + 5px);
     color:black;
-    transition: color 0.6s, right 1s 0s ease;
+    transition: color 0.6s, right 1s 0s linear;
 }
 #annot2.anim{
-    right: calc(50% + 60px);
+    right: calc(50% + 76px);
     color:black;
-    transition: color 0.8s 0.2s, right 1.1s 0.2s ease;
+    transition: color 0.8s 0.2s, right 1.1s 0.2s linear;
 }
 #annot3.anim{
-    left: calc(50% + 70px);
+    left: calc(50% + 28px);
     color:black;
-    transition: color 0.6s, left 1s 0.1s ease;
+    transition: color 0.6s, left 1s 0.1s linear;
 }
 #annot4.anim{
-    left: calc(50% + 70px);
+    left: calc(50% + 47px);
     color:black;
-    transition: color 0.8s 0.3s, left 1.1s 0.3s ease;
+    transition: color 0.8s 0.3s, left 1.1s 0.3s linear;
 }
 
 #excellence,.cartes{
@@ -174,17 +184,18 @@ h2{
 
 #excellence .sectionImage{
     padding: 1rem;
-    width:38%;
+    width:45%;
 }
 #epure{
     box-shadow: 0 4px 6px -6px #22222286;
+
 }
 
 
 #epure .carte{
     margin:20px;
-    width:360px;
-    height:310px;
+    width:482px;
+    height:403px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -193,7 +204,7 @@ h2{
 #epure .carte>div{
     background-color: none;
     width:100%;
-    height:310px;
+    height:403px;
     padding:18px;
     display:flex;
     flex-direction: column;
