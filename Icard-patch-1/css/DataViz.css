@@ -1,3 +1,7 @@
+img{
+  width:100%;
+}
+
 .titre {
   margin-top: 5rem;
 }
@@ -17,6 +21,15 @@ li {
   padding: 1rem;
   border-radius: 10px;
 }/*# sourceMappingURL=DataViz.css.map */
+
+#prefere{
+  font-size:180px;
+  font-weight: 700;
+  text-align: center;
+  color: #54525d;
+  line-height: 211px;
+  transition: color 1s;
+}
 
 .Données,.Chansons{
 
