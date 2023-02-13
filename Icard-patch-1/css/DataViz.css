@@ -1,3 +1,7 @@
+img{
+  width:100%;
+}
+
 .titre {
   margin-top: 5rem;
 }
@@ -11,12 +15,46 @@ li {
   justify-content: center;
   margin-top: 2rem;
 }
-.filtre button {
+/* .filtre button {
   margin: 1rem;
   border: 1px solid black;
   padding: 1rem;
   border-radius: 10px;
-}/*# sourceMappingURL=DataViz.css.map */
+} */
+/*# sourceMappingURL=DataViz.css.map */
+.filtre button:first-of-type{
+  background-color: var(--rougeMarron);
+  border:none;
+}
+.filtre :not(button:first-of-type){
+  background-color: var(--beigeClair);
+}
+
+#prefere{
+  font-size:180px;
+  font-weight: 700;
+  text-align: center;
+  color: #54525d;
+  line-height: 211px;
+  transition: color 1s;
+  transform:scale(0);
+}
+#prefere.apparaitre{
+  transform:scale(1);
+  transition: all 1s;
+}
+#accords div{
+  transform:scale(0);
+}
+#accords.apparaitre div:first-of-type{
+  transform:scale(1);
+  transition: all 1s 0.15s;
+}
+#accords.apparaitre div:last-of-type{
+  transform:scale(1);
+  transition: all 1s 0.3s;
+}
+
 
 .Données,.Chansons{
 

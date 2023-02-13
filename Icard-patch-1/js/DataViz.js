@@ -1,9 +1,33 @@
-const ctx = document.querySelector('#myChart');
-
+const accords = document.querySelector('#accords');
+const prefere=document.getElementById('prefere');
 const faussesNotes = document.querySelector('#Fausse-Note');
 const justesse = document.querySelector('#Justesse');
 
 const frequenceEtDuree = document.getElementById('frequenceEtDuree')
+
+
+const prefereObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    //affichage du E en ajoutant une classe "visile", pour mieux paramétrer la transition avec du css
+
+    prefere.classList.add('apparaitre')
+    prefere.disconnect()
+  }
+
+}, { threshold: 0.5, rootMargin: "0px 0px 0px 0px" })
+prefereObserver.observe(prefere)
+
+const accordsObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    //affichage des accords en ajoutant une classe "visile", pour mieux paramétrer la transition avec du css
+
+    accords.classList.add('apparaitre')
+    accordsObserver.disconnect()
+  }
+
+}, { threshold: 0.5, rootMargin: "0px 0px 0px 0px" })
+accordsObserver.observe(accords)
+
 
 const justesseObserver = new IntersectionObserver(entry => {
   if (entry[0].isIntersecting) {
@@ -34,7 +58,7 @@ const justesseObserver = new IntersectionObserver(entry => {
     justesseObserver.disconnect()
   }
 
-}, { threshold: 1, rootMargin: "0px 0px -120px 0px" })
+}, { threshold: 0.7, rootMargin: "0px 0px -120px 0px" })
 justesseObserver.observe(justesse)
 
 
@@ -69,25 +93,6 @@ const faussesNotesObserver = new IntersectionObserver(entry => {
 
 }, { threshold: 1, rootMargin: "0px 0px -180px 0px" })
 faussesNotesObserver.observe(faussesNotes)
-
-
-new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: ['A', 'EM'],
-    datasets: [{
-      label: '%echec',
-      data: [{ id: 'EM', nested: { value: 1500 } }, { id: 'AM', nested: { value: 500 } }]
-    },
-    {label: '# of Votes'}
-      ]
-  },
-  options: {
-    parsing: {
-      key: 'nested.value'
-    }
-  }
-});
 
 
 const freqObserver = new IntersectionObserver(entry => {
