@@ -249,3 +249,9 @@ footer p {
     height: 17em;
   }
 }
+
+
+
+::-webkit-scrollbar-track-piece{
+  display:none;
+}
